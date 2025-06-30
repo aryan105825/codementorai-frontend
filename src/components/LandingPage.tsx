@@ -243,20 +243,15 @@ export default function LandingPage () {
             { src: Roadmap_GENERATOR, title: 'Roadmap Generator' },
             { src: DASHBOARD, title: 'Analytics' }
           ].map((shot, i) => (
-            <Grid
-              sx={{
-                cursor: 'pointer', 
-                '&:hover': {
-                  boxShadow: '0 0 20px #16f09855',
-                  transform: 'scale(1.05)'
-                }
-              }}
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              key={i}
-            >
+           <Box key={i} sx={{
+  cursor: 'pointer',
+  '&:hover': {
+    boxShadow: '0 0 20px #16f09855',
+    transform: 'scale(1.05)'
+  },
+  width: { xs: '100%', sm: '50%', md: '33.33%' },
+  padding: 1
+}}>
               <motion.div whileHover={{ scale: 1.05 }}>
                 <Paper
                   sx={{
@@ -292,7 +287,7 @@ export default function LandingPage () {
                   </Typography>
                 </Paper>
               </motion.div>
-            </Grid>
+            </Box>
           ))}
         </Grid>
         {/* Features */}
@@ -312,20 +307,15 @@ export default function LandingPage () {
 
         <Grid container spacing={4} justifyContent='center'>
           {features.map((feature, i) => (
-            <Grid
-              sx={{
-                cursor: 'pointer', 
-                '&:hover': {
-                  boxShadow: '0 0 20px #16f09855',
-                  transform: 'scale(1.05)'
-                }
-              }}
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              key={i}
-            >
+           <Box key={i} sx={{
+  cursor: 'pointer',
+  '&:hover': {
+    boxShadow: '0 0 20px #16f09855',
+    transform: 'scale(1.05)'
+  },
+  width: { xs: '100%', sm: '50%', md: '33.33%' },
+  padding: 1
+}}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
@@ -359,7 +349,7 @@ export default function LandingPage () {
                   </Typography>
                 </Paper>
               </motion.div>
-            </Grid>
+            </Box>
           ))}
         </Grid>
       </Container>
